@@ -7,7 +7,15 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    background-image: url("/pinkruins.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #b6303d;
+    width: 100vw;
+    height: 100vh;
 }
 
 .navbar {
@@ -15,29 +23,30 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #DE3C4B;
+    background-color: #ff001900;
     color: #FBF5F3;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 22px;
     width: 100%;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .nav-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-left: 1px solid rgba(0, 0, 0, 0.253);
-    border-right: 1px solid black;
+    gap: 80px;
+    width: 100%;
 }
 
 .logo-area {
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: 40px;
+    justify-content: flex-start;
     width: 100%;
+    margin-left: 10%;
 }
 
 .logo-area > h3 {
@@ -46,19 +55,21 @@ html, body {
     align-self: center;
 }
 
-.header-area {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-}
-
-.header-area > h2 {
+.logo {
+    align-self: center;
+    border-radius: 10px;
+    width: 240px;
+    height: 80px;
     margin: 0px;
     padding: 0px;
-    align-self: center;
+    border: 1px solid #ffffff00;
+    transition: ease 0.25s;
+}
+
+.logo:hover {
+    border: 1px solid white;
+    cursor: pointer;
+    -webkit-transform: scale(1.05);
 }
 
 .link-area {
@@ -66,13 +77,58 @@ html, body {
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    margin-right: 40px;
-    gap: 10px;
-    width: 100%;
 }
 
-.link-area > a {
+.link-border {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #a31c2ae5;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.link-border > a {
     margin: 0px;
     padding: 0px;
     align-self: center;
+}
+
+.login-register {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-right: 10%;
+}
+
+.link-effect {
+    transition: ease 0.25s;
+    align-self: center;
+}
+
+.link-effect:hover {
+    -webkit-transform: scale(1.05);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.body-area {
+    flex-grow: 1;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer {
+    background-color: #a31c2ae5;
+    border-top: 1px solid #b6303d;
+    width: 100%;
+    flex-shrink: 1;
 }
