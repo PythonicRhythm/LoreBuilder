@@ -11,6 +11,6 @@ import java.util.List;
 public interface SpellDAO extends MongoRepository<Spell, ObjectId> {
     List<Spell> findAllByClassesContaining(String classes);
     List<Spell> findAllByLevel(String level);
-
+    List<Spell> findAllByClassesAndLevel(String classes, String level);
 
 }
