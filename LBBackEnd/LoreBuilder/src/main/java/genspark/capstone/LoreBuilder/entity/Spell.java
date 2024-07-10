@@ -7,7 +7,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import java.util.List;
 
 @Document(collection = "Spell")
 @Getter
@@ -15,25 +14,20 @@ import java.util.List;
 public class Spell {
     @Id
     private ObjectId id;
-    private String castingTime;
-    private String[] classes;
-    private Components components;
-    private String description;
-    private String duration;
-    private String level;
     private String name;
+    private String desc;
+    private String page;
     private String range;
-    private boolean ritual;
+    private String components;
+    private String material;
+    private String ritual;
+    private String duration;
+    private String concentration;
+    @Field("casting_time")
+    private String castingTime;
+    private String level;
     private String school;
-    private String[] tags;
-    private String type;
+    @Field("class")
+    private String[] classes;
 }
 
-@Getter
-@Setter
-class Components {
-    private boolean material;
-    private String raw;
-    private boolean somatic;
-    private boolean verbal;
-}
