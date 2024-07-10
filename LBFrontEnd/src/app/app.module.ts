@@ -7,6 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { CharactersComponent } from './characters/characters.component';
 import { ClassesComponent } from './classes/classes.component';
 import { RacesComponent } from './races/races.component';
+import { SocialComponent } from './social/social.component';
+import { CampaignsComponent } from './campaigns/campaigns.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { RacesComponent } from './races/races.component';
     AboutComponent,
     CharactersComponent,
     ClassesComponent,
-    RacesComponent
+    RacesComponent,
+    SocialComponent,
+    CampaignsComponent
   ],
   imports: [
     BrowserModule,

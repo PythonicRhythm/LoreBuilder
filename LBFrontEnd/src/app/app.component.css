@@ -110,6 +110,8 @@ html, body {
 .link-effect {
     transition: ease 0.25s;
     align-self: center;
+    color: white;
+    text-decoration: none;
 }
 
 .link-effect:hover {
