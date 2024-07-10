@@ -1,1 +1,12 @@
-<p>characters works!</p>
+<div class="main-page">
+    <div class="character-list">
+        <h1 *ngIf="characters.length == 0">No characters have been made yet. Try our character creator!</h1>
+        <app-one-character *ngFor="let char of characters"></app-one-character>
+        <a>
+            <div class="new-character">
+                
+            </div>
+        </a>
+    </div>
+    
+</div>

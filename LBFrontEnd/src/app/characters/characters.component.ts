@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TitleService } from '../title.service';
+import { DBfetchService } from '../dbfetch.service';
 
 @Component({
   selector: 'app-characters',
@@ -8,9 +9,16 @@ import { TitleService } from '../title.service';
 })
 export class CharactersComponent implements OnInit{
 
-  constructor(private titleServ: TitleService) {}
+  characters:any;
+
+  constructor(private titleServ: TitleService, private dbfetchServ: DBfetchService) {}
 
   ngOnInit() {
     this.titleServ.setTitle('Characters');
+    this.getUserCharacters();
+  }
+
+  getUserCharacters() {
+    this.characters = this.dbfetchServ.grabUserCharacters();
   }
 }

@@ -9,6 +9,7 @@ import { ClassesComponent } from './classes/classes.component';
 import { RacesComponent } from './races/races.component';
 import { SocialComponent } from './social/social.component';
 import { CampaignsComponent } from './campaigns/campaigns.component';
+import { OneCharacterComponent } from './one-character/one-character.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CampaignsComponent } from './campaigns/campaigns.component';
     ClassesComponent,
     RacesComponent,
     SocialComponent,
-    CampaignsComponent
+    CampaignsComponent,
+    OneCharacterComponent,
   ],
   imports: [
     BrowserModule,
