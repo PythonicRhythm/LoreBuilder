@@ -16,6 +16,8 @@ public class Spell {
     private ObjectId id;
     private String name;
     private String desc;
+    @Field("higher_level")
+    private String higherLevel;
     private String page;
     private String range;
     private String components;

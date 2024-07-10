@@ -23,4 +23,8 @@ public class SpellService {
     public List<Spell> getAllByLevel(String level){
         return this.spellDAO.findAllByLevel(level);
     }
+
+    public List<Spell> getAllByClassAndLevel(String classes, String level){
+        return this.spellDAO.findAllByClassesAndLevel(classes,level);
+    }
 }
