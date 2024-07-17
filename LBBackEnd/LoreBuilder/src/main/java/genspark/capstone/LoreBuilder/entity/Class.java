@@ -67,13 +67,17 @@ class Choose {
     private List<String> from;
     private Long count;
 }
+@Getter
+@Setter
 class StartingEquipment {
-    private Boolean additionalFromBackground;
+    private List<Boolean> additionalFromBackground;
     @Field("default")
     private List<String> defaults;
     private String goldAlternative;
     private List<DefaultDaum> defaultData;
 }
+@Getter
+@Setter
 class DefaultDaum {
     private List<String> a;
     private List<?> b;
@@ -81,13 +85,19 @@ class DefaultDaum {
     @Field("_")
     private List<String> field;
 }
+@Getter
+@Setter
 class Multiclassing {
     private Requirements requirements;
     private ProficienciesGained proficienciesGained;
 }
+@Getter
+@Setter
 class Requirements {
     private Long wis;
 }
+@Getter
+@Setter
 class ProficienciesGained {
     private List<String> armor;
 }
@@ -95,7 +105,7 @@ class ProficienciesGained {
 @Setter
 class ClassTableGroup {
     private List<String> colLabels;
-    private List<List<Long>> rows;
+    private List<List<?>> rows;
     private String title;
     private List<List<Long>> rowsSpellProgression;
 }
@@ -128,7 +138,7 @@ class Subclass {
 @Setter
 class AdditionalSpell {
     private Prepared prepared;
-
+//    private Known known;
 }
 @Getter
 @Setter
@@ -143,8 +153,8 @@ class Prepared {
     private List<String> n7;
     @Field("9")
     private List<String> n9;
-    @Field("17")
-    private List<n17> n17;
+//    @Field("17")
+//    private List<n17> n17;
 }
 @Getter
 @Setter
@@ -169,7 +179,7 @@ class ClassFeature {
     private String name;
     private String source;
     private Long page;
-    private Boolean srd;
+    private List<Boolean> srd;
     private Boolean basicRules;
     private String className;
     private String classSource;
