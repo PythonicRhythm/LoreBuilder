@@ -25,10 +25,12 @@ public class SpellController {
     List<Spell> getAllSpellByClass(@RequestParam String q){
         return this.spellService.getAllByClassesContaining(q);
     }
+
     @GetMapping("/spell/level")
     List<Spell> getAllByLevel(@RequestParam String q){
         return this.spellService.getAllByLevel(q);
     }
+
     @GetMapping("/spell/levelandclass")
     List<Spell> getAllByClassAndLevel(@RequestParam("class") String classname, @RequestParam("level") String level){
         return this.spellService.getAllByClassAndLevel(classname,level);
